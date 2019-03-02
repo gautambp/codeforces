@@ -4,5 +4,5 @@ Inside the folder, there are two files -
 * problem statement html file that describes the problem
 * solution code that attempts to solve the problem
 
-Since the download being used to extract my solutions is not able to download just my successful submissions, it also ends up downloading blank submissions.
-There might be a few empty solution code files.
+Since the download tool being used to extract my solutions is not able to download only my successful submissions, it also ends up downloading blank/empty submissions.
+Due to which there might be a few empty solution code files.
