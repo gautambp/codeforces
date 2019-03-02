@@ -1,0 +1,127 @@
+<div class="ttypography">
+ <div class="problem-statement">
+  <div class="header">
+   <div class="title">
+    A. Arpa and a research in Mexican wave
+   </div>
+   <div class="time-limit">
+    <div class="property-title">
+     time limit per test
+    </div>1 second
+   </div>
+   <div class="memory-limit">
+    <div class="property-title">
+     memory limit per test
+    </div>256 megabytes
+   </div>
+   <div class="input-file">
+    <div class="property-title">
+     input
+    </div>standard input
+   </div>
+   <div class="output-file">
+    <div class="property-title">
+     output
+    </div>standard output
+   </div>
+  </div>
+  <div>
+   <p>Arpa is researching the Mexican wave.</p>
+   <p>There are <span class="tex-span"><i>n</i></span> spectators in the stadium, labeled from <span class="tex-span">1</span> to <span class="tex-span"><i>n</i></span>. They start the Mexican wave at time <span class="tex-span">0</span>. </p>
+   <ul> 
+    <li> At time <span class="tex-span">1</span>, the first spectator stands. </li>
+    <li> At time <span class="tex-span">2</span>, the second spectator stands. </li>
+    <li> <span class="tex-span">...</span> </li>
+    <li> At time <span class="tex-span"><i>k</i></span>, the <span class="tex-span"><i>k</i></span>-th spectator stands. </li>
+    <li> At time <span class="tex-span"><i>k</i>?+?1</span>, the <span class="tex-span">(<i>k</i>?+?1)</span>-th spectator stands and the first spectator sits. </li>
+    <li> At time <span class="tex-span"><i>k</i>?+?2</span>, the <span class="tex-span">(<i>k</i>?+?2)</span>-th spectator stands and the second spectator sits. </li>
+    <li> <span class="tex-span">...</span> </li>
+    <li> At time <span class="tex-span"><i>n</i></span>, the <span class="tex-span"><i>n</i></span>-th spectator stands and the <span class="tex-span">(<i>n</i>?-?<i>k</i>)</span>-th spectator sits. </li>
+    <li> At time <span class="tex-span"><i>n</i>?+?1</span>, the <span class="tex-span">(<i>n</i>?+?1?-?<i>k</i>)</span>-th spectator sits. </li>
+    <li> <span class="tex-span">...</span> </li>
+    <li> At time <span class="tex-span"><i>n</i>?+?<i>k</i></span>, the <span class="tex-span"><i>n</i></span>-th spectator sits. </li>
+   </ul>
+   <p>Arpa wants to know how many spectators are standing at time <span class="tex-span"><i>t</i></span>.</p>
+  </div>
+  <div class="input-specification">
+   <div class="section-title">
+    Input
+   </div>
+   <p>The first line contains three integers <span class="tex-span"><i>n</i></span>, <span class="tex-span"><i>k</i></span>, <span class="tex-span"><i>t</i></span> (<span class="tex-span">1???<i>n</i>???10<sup class="upper-index">9</sup></span>, <span class="tex-span">1???<i>k</i>???<i>n</i></span>, <span class="tex-span">1???<i>t</i>?&lt;?<i>n</i>?+?<i>k</i></span>).</p>
+  </div>
+  <div class="output-specification">
+   <div class="section-title">
+    Output
+   </div>
+   <p>Print single integer: how many spectators are standing at time <span class="tex-span"><i>t</i></span>.</p>
+  </div>
+  <div class="sample-tests">
+   <div class="section-title">
+    Examples
+   </div>
+   <div class="sample-test">
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>10 5 3<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>3<br></pre>
+    </div>
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>10 5 7<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>5<br></pre>
+    </div>
+    <div class="input">
+     <div class="title">
+      Input
+     </div>
+     <pre>10 5 12<br></pre>
+    </div>
+    <div class="output">
+     <div class="title">
+      Output
+     </div>
+     <pre>3<br></pre>
+    </div>
+   </div>
+  </div>
+  <div class="note">
+   <div class="section-title">
+    Note
+   </div>
+   <p>In the following a sitting spectator is represented as <span class="tex-font-style-tt">-</span>, a standing spectator is represented as <span class="tex-font-style-tt">^</span>.</p>
+   <ul> 
+    <li> At <span class="tex-span"><i>t</i>?=?0?</span> <span class="tex-font-style-tt">----------</span> <img align="middle" class="tex-formula" src="/predownloaded/8f/47/8f47e03310a34fa0dfe3ce5ec76689df06d42f91.png" style="max-width: 100.0%;max-height: 100.0%;"> number of standing spectators = 0. </li>
+    <li> At <span class="tex-span"><i>t</i>?=?1?</span> <span class="tex-font-style-tt">^---------</span> <img align="middle" class="tex-formula" src="/predownloaded/8f/47/8f47e03310a34fa0dfe3ce5ec76689df06d42f91.png" style="max-width: 100.0%;max-height: 100.0%;"> number of standing spectators = 1. </li>
+    <li> At <span class="tex-span"><i>t</i>?=?2?</span> <span class="tex-font-style-tt">^^--------</span> <img align="middle" class="tex-formula" src="/predownloaded/8f/47/8f47e03310a34fa0dfe3ce5ec76689df06d42f91.png" style="max-width: 100.0%;max-height: 100.0%;"> number of standing spectators = 2. </li>
+    <li> At <span class="tex-span"><i>t</i>?=?3?</span> <span class="tex-font-style-tt">^^^-------</span> <img align="middle" class="tex-formula" src="/predownloaded/8f/47/8f47e03310a34fa0dfe3ce5ec76689df06d42f91.png" style="max-width: 100.0%;max-height: 100.0%;"> number of standing spectators = 3. </li>
+    <li> At <span class="tex-span"><i>t</i>?=?4?</span> <span class="tex-font-style-tt">^^^^------</span> <img align="middle" class="tex-formula" src="/predownloaded/8f/47/8f47e03310a34fa0dfe3ce5ec76689df06d42f91.png" style="max-width: 100.0%;max-height: 100.0%;"> number of standing spectators = 4. </li>
+    <li> At <span class="tex-span"><i>t</i>?=?5?</span> <span class="tex-font-style-tt">^^^^^-----</span> <img align="middle" class="tex-formula" src="/predownloaded/8f/47/8f47e03310a34fa0dfe3ce5ec76689df06d42f91.png" style="max-width: 100.0%;max-height: 100.0%;"> number of standing spectators = 5. </li>
+    <li> At <span class="tex-span"><i>t</i>?=?6?</span> <span class="tex-font-style-tt">-^^^^^----</span> <img align="middle" class="tex-formula" src="/predownloaded/8f/47/8f47e03310a34fa0dfe3ce5ec76689df06d42f91.png" style="max-width: 100.0%;max-height: 100.0%;"> number of standing spectators = 5. </li>
+    <li> At <span class="tex-span"><i>t</i>?=?7?</span> <span class="tex-font-style-tt">--^^^^^---</span> <img align="middle" class="tex-formula" src="/predownloaded/8f/47/8f47e03310a34fa0dfe3ce5ec76689df06d42f91.png" style="max-width: 100.0%;max-height: 100.0%;"> number of standing spectators = 5. </li>
+    <li> At <span class="tex-span"><i>t</i>?=?8?</span> <span class="tex-font-style-tt">---^^^^^--</span> <img align="middle" class="tex-formula" src="/predownloaded/8f/47/8f47e03310a34fa0dfe3ce5ec76689df06d42f91.png" style="max-width: 100.0%;max-height: 100.0%;"> number of standing spectators = 5. </li>
+    <li> At <span class="tex-span"><i>t</i>?=?9?</span> <span class="tex-font-style-tt">----^^^^^-</span> <img align="middle" class="tex-formula" src="/predownloaded/8f/47/8f47e03310a34fa0dfe3ce5ec76689df06d42f91.png" style="max-width: 100.0%;max-height: 100.0%;"> number of standing spectators = 5. </li>
+    <li> At <span class="tex-span"><i>t</i>?=?10</span> <span class="tex-font-style-tt">-----^^^^^</span> <img align="middle" class="tex-formula" src="/predownloaded/8f/47/8f47e03310a34fa0dfe3ce5ec76689df06d42f91.png" style="max-width: 100.0%;max-height: 100.0%;"> number of standing spectators = 5. </li>
+    <li> At <span class="tex-span"><i>t</i>?=?11</span> <span class="tex-font-style-tt">------^^^^</span> <img align="middle" class="tex-formula" src="/predownloaded/8f/47/8f47e03310a34fa0dfe3ce5ec76689df06d42f91.png" style="max-width: 100.0%;max-height: 100.0%;"> number of standing spectators = 4. </li>
+    <li> At <span class="tex-span"><i>t</i>?=?12</span> <span class="tex-font-style-tt">-------^^^</span> <img align="middle" class="tex-formula" src="/predownloaded/8f/47/8f47e03310a34fa0dfe3ce5ec76689df06d42f91.png" style="max-width: 100.0%;max-height: 100.0%;"> number of standing spectators = 3. </li>
+    <li> At <span class="tex-span"><i>t</i>?=?13</span> <span class="tex-font-style-tt">--------^^</span> <img align="middle" class="tex-formula" src="/predownloaded/8f/47/8f47e03310a34fa0dfe3ce5ec76689df06d42f91.png" style="max-width: 100.0%;max-height: 100.0%;"> number of standing spectators = 2. </li>
+    <li> At <span class="tex-span"><i>t</i>?=?14</span> <span class="tex-font-style-tt">---------^</span> <img align="middle" class="tex-formula" src="/predownloaded/8f/47/8f47e03310a34fa0dfe3ce5ec76689df06d42f91.png" style="max-width: 100.0%;max-height: 100.0%;"> number of standing spectators = 1. </li>
+    <li> At <span class="tex-span"><i>t</i>?=?15</span> <span class="tex-font-style-tt">----------</span> <img align="middle" class="tex-formula" src="/predownloaded/8f/47/8f47e03310a34fa0dfe3ce5ec76689df06d42f91.png" style="max-width: 100.0%;max-height: 100.0%;"> number of standing spectators = 0. </li>
+   </ul>
+  </div>
+ </div>
+ <p> </p>
+</div>

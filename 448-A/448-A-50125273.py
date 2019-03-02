@@ -1,0 +1,8 @@
+s = input().split()
+a = int(s[0])+int(s[1])+int(s[2])
+s = input().split()
+b = int(s[0])+int(s[1])+int(s[2])
+n = int(input())
+n -= (a//5 if a%5 == 0 else 1+(a//5))
+n -= (b//10 if b%10 == 0 else 1+(b//10))
+print('YES' if n >= 0 else 'NO')
